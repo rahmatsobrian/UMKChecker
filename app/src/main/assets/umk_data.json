@@ -1,0 +1,1070 @@
+{
+  "updatedAt": "2025-01-01",
+  "source": "Estimasi berdasarkan data publik UMP/UMK 2025. Harap verifikasi dengan Keputusan Menteri Ketenagakerjaan / Gubernur resmi sebelum dipakai untuk keperluan formal. Data dapat diperbarui dengan mengedit file ini.",
+  "items": [
+    {
+      "regionName": "Provinsi Aceh",
+      "provinceName": "Aceh",
+      "amount": 3685616,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sumatera Utara",
+      "provinceName": "Sumatera Utara",
+      "amount": 2992559,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sumatera Barat",
+      "provinceName": "Sumatera Barat",
+      "amount": 2994193,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Riau",
+      "provinceName": "Riau",
+      "amount": 3508776,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kepulauan Riau",
+      "provinceName": "Kepulauan Riau",
+      "amount": 3514916,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Jambi",
+      "provinceName": "Jambi",
+      "amount": 3234533,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sumatera Selatan",
+      "provinceName": "Sumatera Selatan",
+      "amount": 3681570,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kepulauan Bangka Belitung",
+      "provinceName": "Kepulauan Bangka Belitung",
+      "amount": 4101530,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Bengkulu",
+      "provinceName": "Bengkulu",
+      "amount": 2670039,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Lampung",
+      "provinceName": "Lampung",
+      "amount": 2893069,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi DKI Jakarta",
+      "provinceName": "DKI Jakarta",
+      "amount": 5396761,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Jawa Barat",
+      "provinceName": "Jawa Barat",
+      "amount": 2191232,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Jawa Tengah",
+      "provinceName": "Jawa Tengah",
+      "amount": 2169349,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi DI Yogyakarta",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2264080,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Jawa Timur",
+      "provinceName": "Jawa Timur",
+      "amount": 2305984,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Banten",
+      "provinceName": "Banten",
+      "amount": 2905119,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Bali",
+      "provinceName": "Bali",
+      "amount": 2996560,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Nusa Tenggara Barat",
+      "provinceName": "Nusa Tenggara Barat",
+      "amount": 2602931,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Nusa Tenggara Timur",
+      "provinceName": "Nusa Tenggara Timur",
+      "amount": 2328969,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kalimantan Barat",
+      "provinceName": "Kalimantan Barat",
+      "amount": 2878286,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kalimantan Tengah",
+      "provinceName": "Kalimantan Tengah",
+      "amount": 3473621,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kalimantan Selatan",
+      "provinceName": "Kalimantan Selatan",
+      "amount": 3496194,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kalimantan Timur",
+      "provinceName": "Kalimantan Timur",
+      "amount": 3579313,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Kalimantan Utara",
+      "provinceName": "Kalimantan Utara",
+      "amount": 3580160,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sulawesi Utara",
+      "provinceName": "Sulawesi Utara",
+      "amount": 3775425,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sulawesi Tengah",
+      "provinceName": "Sulawesi Tengah",
+      "amount": 2914583,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sulawesi Selatan",
+      "provinceName": "Sulawesi Selatan",
+      "amount": 3657527,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sulawesi Tenggara",
+      "provinceName": "Sulawesi Tenggara",
+      "amount": 2980120,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Gorontalo",
+      "provinceName": "Gorontalo",
+      "amount": 3221731,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Sulawesi Barat",
+      "provinceName": "Sulawesi Barat",
+      "amount": 3104430,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Maluku",
+      "provinceName": "Maluku",
+      "amount": 3141700,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Maluku Utara",
+      "provinceName": "Maluku Utara",
+      "amount": 3405614,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua",
+      "provinceName": "Papua",
+      "amount": 4285850,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua Barat",
+      "provinceName": "Papua Barat",
+      "amount": 3721043,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua Selatan",
+      "provinceName": "Papua Selatan",
+      "amount": 4285847,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua Tengah",
+      "provinceName": "Papua Tengah",
+      "amount": 4285847,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua Pegunungan",
+      "provinceName": "Papua Pegunungan",
+      "amount": 4285847,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Provinsi Papua Barat Daya",
+      "provinceName": "Papua Barat Daya",
+      "amount": 3721043,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": true
+    },
+    {
+      "regionName": "Karawang",
+      "provinceName": "Jawa Barat",
+      "amount": 5599593,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bekasi (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 5558515,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bekasi (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 5558515,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Depok",
+      "provinceName": "Jawa Barat",
+      "amount": 5195691,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bogor (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 5126897,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bogor (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 4877211,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Purwakarta",
+      "provinceName": "Jawa Barat",
+      "amount": 4838386,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bandung (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 4482914,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cimahi",
+      "provinceName": "Jawa Barat",
+      "amount": 3735867,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bandung (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 3736742,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bandung Barat",
+      "provinceName": "Jawa Barat",
+      "amount": 3736741,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sumedang",
+      "provinceName": "Jawa Barat",
+      "amount": 3732088,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Subang",
+      "provinceName": "Jawa Barat",
+      "amount": 3508914,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sukabumi (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 2799931,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sukabumi (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 3603715,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cirebon (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 2724618,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cirebon (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 2751201,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Indramayu",
+      "provinceName": "Jawa Barat",
+      "amount": 2794237,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Garut",
+      "provinceName": "Jawa Barat",
+      "amount": 2328555,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tasikmalaya (Kota)",
+      "provinceName": "Jawa Barat",
+      "amount": 2422955,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tasikmalaya (Kabupaten)",
+      "provinceName": "Jawa Barat",
+      "amount": 2482083,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cianjur",
+      "provinceName": "Jawa Barat",
+      "amount": 2916694,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Ciamis",
+      "provinceName": "Jawa Barat",
+      "amount": 2160391,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kuningan",
+      "provinceName": "Jawa Barat",
+      "amount": 2179498,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Majalengka",
+      "provinceName": "Jawa Barat",
+      "amount": 2257871,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pangandaran",
+      "provinceName": "Jawa Barat",
+      "amount": 2178089,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cilegon",
+      "provinceName": "Banten",
+      "amount": 4740588,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tangerang (Kota)",
+      "provinceName": "Banten",
+      "amount": 4711399,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tangerang (Kabupaten)",
+      "provinceName": "Banten",
+      "amount": 4760791,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tangerang Selatan",
+      "provinceName": "Banten",
+      "amount": 4700770,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Serang (Kota)",
+      "provinceName": "Banten",
+      "amount": 4522449,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Serang (Kabupaten)",
+      "provinceName": "Banten",
+      "amount": 4649861,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pandeglang",
+      "provinceName": "Banten",
+      "amount": 3016210,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Lebak",
+      "provinceName": "Banten",
+      "amount": 3013758,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Semarang (Kota)",
+      "provinceName": "Jawa Tengah",
+      "amount": 3454827,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Semarang (Kabupaten)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2731913,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kudus",
+      "provinceName": "Jawa Tengah",
+      "amount": 2718039,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Demak",
+      "provinceName": "Jawa Tengah",
+      "amount": 2707500,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Cilacap",
+      "provinceName": "Jawa Tengah",
+      "amount": 2481403,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kendal",
+      "provinceName": "Jawa Tengah",
+      "amount": 2613573,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Surakarta",
+      "provinceName": "Jawa Tengah",
+      "amount": 2276527,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sukoharjo",
+      "provinceName": "Jawa Tengah",
+      "amount": 2202000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Boyolali",
+      "provinceName": "Jawa Tengah",
+      "amount": 2250000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Klaten",
+      "provinceName": "Jawa Tengah",
+      "amount": 2244012,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Magelang (Kota)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2246410,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Magelang (Kabupaten)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2316558,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pekalongan (Kota)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2389415,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pekalongan (Kabupaten)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2334886,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tegal (Kota)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2230965,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tegal (Kabupaten)",
+      "provinceName": "Jawa Tengah",
+      "amount": 2233127,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Purbalingga",
+      "provinceName": "Jawa Tengah",
+      "amount": 2195690,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Banyumas",
+      "provinceName": "Jawa Tengah",
+      "amount": 2233641,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pati",
+      "provinceName": "Jawa Tengah",
+      "amount": 2332350,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Jepara",
+      "provinceName": "Jawa Tengah",
+      "amount": 2610224,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Rembang",
+      "provinceName": "Jawa Tengah",
+      "amount": 2249058,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Blora",
+      "provinceName": "Jawa Tengah",
+      "amount": 2238430,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Grobogan",
+      "provinceName": "Jawa Tengah",
+      "amount": 2223500,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Wonosobo",
+      "provinceName": "Jawa Tengah",
+      "amount": 2159590,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Batang",
+      "provinceName": "Jawa Tengah",
+      "amount": 2282025,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Yogyakarta (Kota)",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2492997,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sleman",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2422573,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bantul",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2377423,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kulon Progo",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2277965,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Gunungkidul",
+      "provinceName": "DI Yogyakarta",
+      "amount": 2273967,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Surabaya",
+      "provinceName": "Jawa Timur",
+      "amount": 4961753,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Gresik",
+      "provinceName": "Jawa Timur",
+      "amount": 4874511,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Sidoarjo",
+      "provinceName": "Jawa Timur",
+      "amount": 4870511,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pasuruan (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 4866890,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Mojokerto (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 4854000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Malang (Kota)",
+      "provinceName": "Jawa Timur",
+      "amount": 3413000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Malang (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 3467000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Batu",
+      "provinceName": "Jawa Timur",
+      "amount": 3155367,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kediri (Kota)",
+      "provinceName": "Jawa Timur",
+      "amount": 2528610,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Kediri (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 2455335,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Blitar (Kota)",
+      "provinceName": "Jawa Timur",
+      "amount": 2330000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Blitar (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 2622203,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Jember",
+      "provinceName": "Jawa Timur",
+      "amount": 2358000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Banyuwangi",
+      "provinceName": "Jawa Timur",
+      "amount": 2549555,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Madiun (Kota)",
+      "provinceName": "Jawa Timur",
+      "amount": 2280000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Madiun (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 2280000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Probolinggo (Kota)",
+      "provinceName": "Jawa Timur",
+      "amount": 2447479,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Probolinggo (Kabupaten)",
+      "provinceName": "Jawa Timur",
+      "amount": 2806000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Tuban",
+      "provinceName": "Jawa Timur",
+      "amount": 2864000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Lamongan",
+      "provinceName": "Jawa Timur",
+      "amount": 2758000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bojonegoro",
+      "provinceName": "Jawa Timur",
+      "amount": 2549556,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Pekanbaru",
+      "provinceName": "Riau",
+      "amount": 3523000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Batam",
+      "provinceName": "Kepulauan Riau",
+      "amount": 4780644,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Balikpapan",
+      "provinceName": "Kalimantan Timur",
+      "amount": 3708000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Samarinda",
+      "provinceName": "Kalimantan Timur",
+      "amount": 3620000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Bontang",
+      "provinceName": "Kalimantan Timur",
+      "amount": 3702000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Medan",
+      "provinceName": "Sumatera Utara",
+      "amount": 3260000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Deli Serdang",
+      "provinceName": "Sumatera Utara",
+      "amount": 3200000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Makassar",
+      "provinceName": "Sulawesi Selatan",
+      "amount": 3900000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Badung",
+      "provinceName": "Bali",
+      "amount": 3300000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    },
+    {
+      "regionName": "Denpasar",
+      "provinceName": "Bali",
+      "amount": 3100000,
+      "year": 2025,
+      "isActive": true,
+      "isProvinceLevel": false
+    }
+  ]
+}

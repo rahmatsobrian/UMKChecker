@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.UmkChecker" parent="android:Theme.Material.NoActionBar" />
+
+    <style name="Theme.UmkChecker.Splash" parent="Theme.UmkChecker">
+        <item name="android:windowBackground">@color/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,154 @@
+name: Android CI Build
+
+# Workflow ini TIDAK memerlukan repository secret apa pun.
+# - gradle-wrapper.jar di-generate otomatis kalau belum ada di repo.
+# - Build "release" ditandatangani pakai debug keystore bawaan AGP
+#   (auto-generated di runner), jadi tetap bisa dibuild tanpa keystore/secret.
+#   Ini cukup untuk testing/distribusi internal, BUKAN untuk rilis Play Store.
+
+on:
+  push:
+    branches: [ "main", "master", "develop" ]
+  pull_request:
+    branches: [ "main", "master", "develop" ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build, Test & Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle (+ dependency cache)
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: 8.9
+          cache-read-only: false
+
+      - name: Generate Gradle Wrapper (jika belum ada)
+        run: |
+          if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
+            echo "::notice::gradle-wrapper.jar tidak ditemukan, generate otomatis..."
+            gradle wrapper --gradle-version 8.9 --distribution-type bin
+          else
+            echo "::notice::gradle-wrapper.jar sudah ada, skip generate."
+          fi
+          chmod +x ./gradlew
+
+      - name: Validate Gradle Wrapper checksum
+        uses: gradle/actions/wrapper-validation@v4
+
+      - name: Show environment info
+        run: |
+          echo "### 🧩 Environment" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          java -version 2>> $GITHUB_STEP_SUMMARY
+          ./gradlew --version >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+      - name: Lint (debug)
+        run: ./gradlew lintDebug --stacktrace --info
+        continue-on-error: true
+
+      - name: Unit tests (debug)
+        run: ./gradlew testDebugUnitTest --stacktrace --info
+        continue-on-error: true
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace --info
+
+      - name: Build release APK (signed dengan debug key, tanpa secret)
+        run: ./gradlew assembleRelease --stacktrace --info
+
+      - name: Collect full build log
+        if: always()
+        run: |
+          mkdir -p ci-logs
+          find . -path "*/build/outputs/logs/*" -name "*.log" -exec cp {} ci-logs/ \; 2>/dev/null || true
+          cp app/build/outputs/apk/**/*.apk ci-logs/ 2>/dev/null || true
+          echo "Build selesai pada $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > ci-logs/summary.txt
+
+      - name: Upload lint report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint-report
+          path: app/build/reports/lint-results-debug.html
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload unit test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-report
+          path: app/build/reports/tests/testDebugUnitTest/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload full Gradle build reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-build-reports
+          path: |
+            app/build/reports/
+            app/build/outputs/logs/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload Debug APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: umk-checker-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 30
+
+      - name: Upload Release APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: umk-checker-release-apk
+          path: app/build/outputs/apk/release/*.apk
+          retention-days: 30
+
+      - name: Write job summary
+        if: always()
+        run: |
+          echo "## 📱 UMK Checker — Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "| Info | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Branch | \`${{ github.ref_name }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Triggered by | ${{ github.actor }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Event | ${{ github.event_name }} |" >> $GITHUB_STEP_SUMMARY
+          if ls app/build/outputs/apk/debug/*.apk >/dev/null 2>&1; then
+            echo "| Debug APK | ✅ berhasil dibuat |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| Debug APK | ❌ gagal |" >> $GITHUB_STEP_SUMMARY
+          fi
+          if ls app/build/outputs/apk/release/*.apk >/dev/null 2>&1; then
+            echo "| Release APK | ✅ berhasil dibuat |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| Release APK | ❌ gagal |" >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Log lengkap & APK tersedia di tab **Artifacts** run ini." >> $GITHUB_STEP_SUMMARY
