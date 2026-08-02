@@ -5,6 +5,10 @@ name: Android CI Build
 # - Build "release" ditandatangani pakai debug keystore bawaan AGP
 #   (auto-generated di runner), jadi tetap bisa dibuild tanpa keystore/secret.
 #   Ini cukup untuk testing/distribusi internal, BUKAN untuk rilis Play Store.
+#
+# Semua output konsol Gradle (termasuk error compile) disimpan sebagai
+# file .log dan ikut di-upload sebagai artifact "gradle-console-logs",
+# supaya bisa didownload & dianalisis walau job gagal.
 
 on:
   push:
@@ -44,9 +48,10 @@ jobs:
 
       - name: Generate Gradle Wrapper (jika belum ada)
         run: |
+          mkdir -p ci-logs
           if [ ! -f "gradle/wrapper/gradle-wrapper.jar" ]; then
             echo "::notice::gradle-wrapper.jar tidak ditemukan, generate otomatis..."
-            gradle wrapper --gradle-version 8.9 --distribution-type bin
+            gradle wrapper --gradle-version 8.9 --distribution-type bin 2>&1 | tee ci-logs/00-wrapper-generate.log
           else
             echo "::notice::gradle-wrapper.jar sudah ada, skip generate."
           fi
@@ -57,33 +62,54 @@ jobs:
 
       - name: Show environment info
         run: |
-          echo "### 🧩 Environment" >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          java -version 2>> $GITHUB_STEP_SUMMARY
-          ./gradlew --version >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          {
+            echo "### 🧩 Environment"
+            echo '```'
+            java -version
+            ./gradlew --version
+            echo '```'
+          } | tee ci-logs/01-environment.log >> "$GITHUB_STEP_SUMMARY"
 
       - name: Lint (debug)
-        run: ./gradlew lintDebug --stacktrace --info
+        run: |
+          set -o pipefail
+          ./gradlew lintDebug --stacktrace --info 2>&1 | tee ci-logs/02-lint.log
         continue-on-error: true
 
       - name: Unit tests (debug)
-        run: ./gradlew testDebugUnitTest --stacktrace --info
+        run: |
+          set -o pipefail
+          ./gradlew testDebugUnitTest --stacktrace --info 2>&1 | tee ci-logs/03-unit-test.log
         continue-on-error: true
 
       - name: Build debug APK
-        run: ./gradlew assembleDebug --stacktrace --info
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug --stacktrace --info 2>&1 | tee ci-logs/04-assemble-debug.log
 
       - name: Build release APK (signed dengan debug key, tanpa secret)
-        run: ./gradlew assembleRelease --stacktrace --info
+        run: |
+          set -o pipefail
+          ./gradlew assembleRelease --stacktrace --info 2>&1 | tee ci-logs/05-assemble-release.log
 
-      - name: Collect full build log
+      - name: Extract error summary from logs
         if: always()
         run: |
-          mkdir -p ci-logs
-          find . -path "*/build/outputs/logs/*" -name "*.log" -exec cp {} ci-logs/ \; 2>/dev/null || true
-          cp app/build/outputs/apk/**/*.apk ci-logs/ 2>/dev/null || true
-          echo "Build selesai pada $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > ci-logs/summary.txt
+          {
+            echo "### ❗ Cuplikan error (jika ada)"
+            echo '```'
+            grep -inE "^e: |error:|FAILURE|what went wrong|Exception|Unresolved reference" ci-logs/*.log 2>/dev/null | tail -80 || echo "Tidak ditemukan baris error eksplisit."
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Gradle console logs (SELALU, walau gagal)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-console-logs
+          path: ci-logs/
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Upload lint report
         if: always()
@@ -133,22 +159,22 @@ jobs:
       - name: Write job summary
         if: always()
         run: |
-          echo "## 📱 UMK Checker — Build Summary" >> $GITHUB_STEP_SUMMARY
-          echo "| Info | Value |" >> $GITHUB_STEP_SUMMARY
-          echo "|------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Commit | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| Branch | \`${{ github.ref_name }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| Triggered by | ${{ github.actor }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| Event | ${{ github.event_name }} |" >> $GITHUB_STEP_SUMMARY
+          echo "## 📱 UMK Checker — Build Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Info | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Commit | \`${{ github.sha }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Branch | \`${{ github.ref_name }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Triggered by | ${{ github.actor }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Event | ${{ github.event_name }} |" >> "$GITHUB_STEP_SUMMARY"
           if ls app/build/outputs/apk/debug/*.apk >/dev/null 2>&1; then
-            echo "| Debug APK | ✅ berhasil dibuat |" >> $GITHUB_STEP_SUMMARY
+            echo "| Debug APK | ✅ berhasil dibuat |" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "| Debug APK | ❌ gagal |" >> $GITHUB_STEP_SUMMARY
+            echo "| Debug APK | ❌ gagal |" >> "$GITHUB_STEP_SUMMARY"
           fi
           if ls app/build/outputs/apk/release/*.apk >/dev/null 2>&1; then
-            echo "| Release APK | ✅ berhasil dibuat |" >> $GITHUB_STEP_SUMMARY
+            echo "| Release APK | ✅ berhasil dibuat |" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "| Release APK | ❌ gagal |" >> $GITHUB_STEP_SUMMARY
+            echo "| Release APK | ❌ gagal |" >> "$GITHUB_STEP_SUMMARY"
           fi
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Log lengkap & APK tersedia di tab **Artifacts** run ini." >> $GITHUB_STEP_SUMMARY
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "📄 Log konsol lengkap ada di artifact **gradle-console-logs**." >> "$GITHUB_STEP_SUMMARY"
